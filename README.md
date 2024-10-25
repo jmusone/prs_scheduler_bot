@@ -2,6 +2,8 @@
 
 This repository provides a discord bot that uses [prs_scheduler_api](https://github.com/jmusone/prs_scheduler_api). It contains near-similar functionality, outlined in the commands listed below.
 
+This github repository does not include the .env file, which holds global variables including the very secret DISCORD_TOKEN. The .env file also includes the endpoints for the prs_scheduler_api, but those can be found in it's own repository (listed above).
+
 ## Commands:
 ### League Commands:
 - $leagues: Returns all leagues
