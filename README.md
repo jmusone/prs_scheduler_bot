@@ -6,16 +6,20 @@ This github repository does not include the .env file, which holds global variab
 
 ## Commands:
 ### League Commands:
-- $leagues: Returns all leagues
-- $add: Adds a new league
+- $teams: Returns all teams
+- $add: Adds a new team
 ```
 $add https://pittsburghsportsleague.leaguetab.com/team/<team_id>/<team_name>
 ```
-- $edit: Edit a previously added league
+- $teaminfo: Retrieves all information for a team based on the given id
 ```
-$edit <league_id> <league> <location> <sport> <team name>
+$teaminfo <team_id>
 ```
-Note: The <league_id> in the edit command is the team's id in the database, but is separate from the <team_id> listed in the add command. It's called <league_id> because that's what it's called in the database, but you can add multiple teams from the same league with no repercussions because they actually represent teams. Bad naming on my part, sorry! 🙁
+- $edit: Edit a previously added team [REDACTED]
+```
+$edit <team_id> <league> <location> <sport> <team_name>
+```
+Note: The <team_id> in $teaminfo and $edit (as well as the <team_name> in the edit command) are different from the parameters of the same name outlined in the PSL URL in the $add command. Use $teams to get the correct id for the other bot commands, as the <team_id> in the PSL URL is only used by PSL, not by this discord bot.
 
 ### Games Commands:
 - $games: Returns games for a given team
